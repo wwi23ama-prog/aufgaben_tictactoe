@@ -31,20 +31,6 @@ import (
 func MakeMove(player string, b board.Board) {
 	// TODO
 
-	/* Hinweis:
-	   Verwenden Sie eine Schleife, um den Spieler so lange nach einem Zug
-	   zu fragen, bis er einen gültigen Zug macht.
-	   D.h. die Schleife läuft so lange, bis die Funktion AskForMove
-	   einen Zug liefert, für den MoveAllowed true liefert.
-	*/
-	// TODO
-
-	/* Hinweis:
-	   Berechnen Sie aus der Zahl den Index für die Reihe und Spalte.
-	   Setzen Sie dann das entsprechende Feld auf den Spieler-String.
-	   Auf das Spielfeld an Stelle [row][col] können Sie
-	   mittels `b[row][col]` zugreifen.
-	*/
 	// TODO
 }
 
@@ -52,17 +38,6 @@ func MakeMove(player string, b board.Board) {
 // auf dem Spielfeld und liefert diese zurück.
 // Ist die Eingabe ungültig, wird -1 zurückgegeben.
 func AskForMove(player string) int {
-	/* Hinweis:
-	   Geben Sie aus, welcher Spieler am Zug ist und
-	   fragen Sie nach einer Zahl für ein Feld.
-	   Verwenden Sie fmt.Scan, um die Eingabe des Spielers einzulesen.
-	   Die Eingabe wird in der Variable `move` gespeichert.
-
-	   Prüfen Sie anschließend, ob die Eingabe gültig ist.
-	   D.h. prüfen Sie, ob die Eingabe einer der Strings "1", "2", ... "9" ist.
-	   Falls ja, geben Sie die Position der Eingabe in der Reihe
-	   "1" ... "9" zurück. D.h. "1" wird zu 0, "2" zu 1 usw.
-	*/
 	// TODO
 	return -1 // ungültige Eingabe
 }
