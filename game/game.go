@@ -26,7 +26,7 @@ func Run() {
 	   SwitchPlayer-Aufruf aus, bevor der erste Zug
 	   gemacht wird.
 	*/
-	//currentPlayer := "O"
+	// TODO
 
 	// Zug-Zähler initialisieren.
 	/* Hinweis:
