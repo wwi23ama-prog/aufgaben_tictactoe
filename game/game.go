@@ -2,8 +2,6 @@ package game
 
 import (
 	"fmt"
-
-	"github.com/wwi23ama-prog/aufgaben_tictactoe/board"
 )
 
 func Run() {
@@ -17,11 +15,7 @@ func Run() {
 	   initialisieren oder es z.B. mit den Zahlen 1-9 initialisieren,
 	   um den Spielern die Eingabe zu erleichtern.
 	*/
-	board := board.MakeBoardFromStrings(
-		"123",
-		"456",
-		"789",
-	)
+	// TODO
 
 	// Spieler und Zug-Zähler initialisieren.
 	/* Hinweis:
@@ -32,7 +26,7 @@ func Run() {
 	   SwitchPlayer-Aufruf aus, bevor der erste Zug
 	   gemacht wird.
 	*/
-	currentPlayer := "O"
+	//currentPlayer := "O"
 
 	// Zug-Zähler initialisieren.
 	/* Hinweis:
@@ -44,17 +38,13 @@ func Run() {
 	// Hauptschleife.
 	for moveCount < 9 {
 		// Prüfen, ob der aktuelle Spieler gewonnen hat.
-		if PlayerWins(currentPlayer, board) {
-			fmt.Println("Spieler", currentPlayer, "gewinnt!")
-			return
-		}
+		// TODO
 
 		// Spieler wechseln und Zug machen.
-		currentPlayer = SwitchPlayer(currentPlayer)
+		// TODO
 
 		// Zug machen und Zug-Zähler erhöhen.
-		MakeMove(currentPlayer, board)
-		moveCount++
+		// TODO
 	}
 
 	fmt.Println("Unentschieden!")
