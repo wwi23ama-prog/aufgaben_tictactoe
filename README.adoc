@@ -1,0 +1,6 @@
+= Tic Tac Toe
+
+Dieses Repo enthält Aufgaben, in deren Rahmen das Spiel "Tic Tac Toe"
+implementiert werden soll.
+Es ist bereits eine Implementierung eines Spielfelds vorgegeben,
+die nun verwendet werden soll, um das Spiel zu implementieren.
