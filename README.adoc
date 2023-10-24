@@ -2,5 +2,53 @@
 
 Dieses Repo enthält Aufgaben, in deren Rahmen das Spiel "Tic Tac Toe"
 implementiert werden soll.
+
+== Vorgabe
+
 Es ist bereits eine Implementierung eines Spielfelds vorgegeben,
 die nun verwendet werden soll, um das Spiel zu implementieren.
+
+Diese Spielfeld-Implementierung ist nicht identisch mit der,
+die in den bisherigen Aufgaben umgesetzt wurde. Sie ist aber
+sehr ähnlich und sollte daher keine Probleme bereiten.
+
+== Umgang mit der Vorgabe
+
+=== Allgemeines
+
+Das vorgegebene Spielfeld enthält einige zustätzliche Funktionen,
+die in der bisherigen Implementierung nicht vorhanden waren.
+Diese können einerseits die Implementierung vereinfachen,
+andererseits aber auch verwirren.
+
+Das Package `board` ist allgemeiner gehalten und soll auch für
+andere Spiele verwendet werden können. Daher ist es nicht
+speziell auf Tic Tac Toe zugeschnitten und enthält auch Funktionen,
+die für Tic Tac Toe nicht benötigt werden.
+In einem "echten" Projekt würde man es in einem separaten Repo
+verwalten und als Abhängigkeit in das Tic Tac Toe Projekt einbinden.
+Hier wurde es aus Gründen der Einfachheit direkt in das Tic-Tac-Toe-Repo
+aufgenommen.
+
+Beim Umgang mit diesem Package ist es daher wichtig,
+die Funktionen zu identifizieren, die für Tic Tac Toe benötigt werden,
+ohne sich dabei in Details zu verlieren.
+Die Funktionen sind alle dokumentiert und die Tests liefern Beispiele
+zur Verwendung.
+
+=== Detail-Hinweise zu relevanten Funktionen
+
+Die wichtigste Datei ist link:board/boardlogic.go[`boardlogic.go`].
+Hierin sind Funktionen vorgegeben, die das Spielfeld analysieren,
+ob z.B. Zeilen oder Spalten voll sind oder ob ein Zeichen überhaupt
+noch im Spielfeld vorkommt.
+
+Diese Funktionen sowie die Konstruktoren `MakeBoard` bzw. `MakeEmptyBoard`
+und die Methode `Board.String` sollten die Basis für Ihre Spiellogik bilden.
+Beachten Sie z.B. auch, dass es möglich ist, ein Spielfeld aus einer
+Liste von Strings zu erzeugen, die die Zeilen des Spielfelds enthalten.
+
+Wenn Sie sich das Package `board` genauer ansehen, sollten Sie sich also
+zunächst auf die Funktionen in link:board/boardlogic.go[`boardlogic.go`]
+und die `Make...`-Funktionen in link:board/board.go[`board.go`] konzentrieren.
+Idealerweise brauchen Sie die übrigen Funktionen gar nicht zu beachten.
