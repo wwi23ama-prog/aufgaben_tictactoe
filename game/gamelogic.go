@@ -8,11 +8,9 @@ func SwitchPlayer(currentPlayer string) string {
 	   Prüfen Sie, ob der aktuelle Spieler "X" ist.
 	   Wenn ja, geben Sie "O" zurück, sonst "X".
 	*/
-	// tag::solution[]
 	if currentPlayer == "X" {
 		return "O"
 	}
-	// end::solution[]
 	return "X"
 }
 
@@ -26,7 +24,6 @@ func PlayerWins(player string, b board.Board) bool {
 	   und die Funktionen RowContainsOnly und ColContainsOnly verwenden.
 	   Die Diagonalen sollten Sie separat prüfen.
 	*/
-	// tag::solution[]
 	for i := range b {
 		if b.RowContainsOnly(i, player) || b.ColContainsOnly(i, player) {
 			return true
@@ -35,7 +32,6 @@ func PlayerWins(player string, b board.Board) bool {
 	if b.DiagRightContainsOnly(0, player) || b.DiagLeftContainsOnly(2, player) {
 		return true
 	}
-	// end::solution[]
 	return false
 }
 
@@ -60,13 +56,10 @@ func MoveAllowed(b board.Board, move int) bool {
 	   über das Spielfeld iterieren und dabei mitzählen,
 	   um das richtige Feld zu finden.
 	*/
-	// tag::solution[]
 	if move < 1 || move > 9 {
 		return false
 	}
 	row := (move - 1) / 3
 	col := (move - 1) % 3
 	return b[row][col] != "X" && b[row][col] != "O"
-	// end::solution[]
-	// iftask: return false
 }

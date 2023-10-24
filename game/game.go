@@ -17,13 +17,11 @@ func Run() {
 	   initialisieren oder es z.B. mit den Zahlen 1-9 initialisieren,
 	   um den Spielern die Eingabe zu erleichtern.
 	*/
-	// tag::initBoard[]
 	board := board.MakeBoardFromStrings(
 		"123",
 		"456",
 		"789",
 	)
-	// end::initBoard[]
 
 	// Spieler und Zug-Zähler initialisieren.
 	/* Hinweis:
@@ -34,39 +32,29 @@ func Run() {
 	   SwitchPlayer-Aufruf aus, bevor der erste Zug
 	   gemacht wird.
 	*/
-	// tag::initPlayer[]
 	currentPlayer := "O"
-	// end::initPlayer[]
 
 	// Zug-Zähler initialisieren.
 	/* Hinweis:
 	   Wir zählen die Züge, um zu erkennen,
 	   wann das Spiel unentschieden ist.
 	*/
-	// tag::initMoveCount[]
 	moveCount := 0
-	// end::initMoveCount[]
 
 	// Hauptschleife.
 	for moveCount < 9 {
 		// Prüfen, ob der aktuelle Spieler gewonnen hat.
-		// tag::playerWins[]
 		if PlayerWins(currentPlayer, board) {
 			fmt.Println("Spieler", currentPlayer, "gewinnt!")
 			return
 		}
-		// end::playerWins[]
 
 		// Spieler wechseln und Zug machen.
-		// tag::switchPlayer[]
 		currentPlayer = SwitchPlayer(currentPlayer)
-		// end::switchPlayer[]
 
 		// Zug machen und Zug-Zähler erhöhen.
-		// tag::makeMove[]
 		MakeMove(currentPlayer, board)
 		moveCount++
-		// end::makeMove[]
 	}
 
 	fmt.Println("Unentschieden!")

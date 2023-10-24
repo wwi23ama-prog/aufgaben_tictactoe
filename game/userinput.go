@@ -40,7 +40,6 @@ func MakeMove(player string, b board.Board) {
 	   D.h. die Schleife läuft so lange, bis die Funktion AskForMove
 	   einen Zug liefert, für den MoveAllowed true liefert.
 	*/
-	// tag::AskForMove[]
 	for move == -1 {
 		move = AskForMove(player)
 		if !MoveAllowed(b, move) {
@@ -48,7 +47,6 @@ func MakeMove(player string, b board.Board) {
 			move = -1
 		}
 	}
-	// end::AskForMove[]
 
 	/* Hinweis:
 	   Berechnen Sie aus der Zahl den Index für die Reihe und Spalte.
@@ -56,11 +54,9 @@ func MakeMove(player string, b board.Board) {
 	   Auf das Spielfeld an Stelle [row][col] können Sie
 	   mittels `b[row][col]` zugreifen.
 	*/
-	// tag::doMove[]
 	row := (move - 1) / 3
 	col := (move - 1) % 3
 	b[row][col] = player
-	// end::doMove[]
 }
 
 // AskForMove fragt den Spieler nach einer Zahl für ein Feld
@@ -80,7 +76,6 @@ func AskForMove(player string) int {
 	   Falls ja, geben Sie die Position der Eingabe in der Reihe
 	   "1" ... "9" zurück. D.h. "1" wird zu 0, "2" zu 1 usw.
 	*/
-	// tag::solution[]
 	fmt.Print("Spieler ", player, " ist am Zug. Bitte ein Feld eingeben: ")
 	fmt.Scan(&move)
 
@@ -90,6 +85,5 @@ func AskForMove(player string) int {
 			return i + 1
 		}
 	}
-	// end::solution[]
 	return -1 // ungültige Eingabe
 }
